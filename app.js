@@ -32,8 +32,8 @@ function search(query){
 	    url: "http://api.giphy.com/v1/gifs/search?q=" + query +"&api_key=dc6zaTOxFJmzC"  
 	}).done(function(response){
 		searchCallback(response);
-
-				
+		$(".placeHere").children("img").remove();
+		//$(".placeHere img").remove();
 		jon = "<img src =" + response.data[2].images.original.url+"></img>";
 		$(".placeHere").append(jon);
 		
