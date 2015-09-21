@@ -10,7 +10,7 @@ $(document).ready(function() {
 		event.preventDefault();
 		
 
-		var lookFor = $(".inputText").val();
+		var lookFor = $(".inputText").val().toLowerCase();
 		alert(lookFor);
 		console.log(lookFor);
 		search(lookFor);
