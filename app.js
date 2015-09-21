@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 		var lookFor = $(".inputText").val().toLowerCase();
 		alert(lookFor);
-		console.log(lookFor);
+		// console.log(lookFor);
 		search(lookFor);
 	});
 });
@@ -33,12 +33,12 @@ function search(query){
 	}).done(function(response){
 		searchCallback(response);
 		$(".placeHere").children("img").remove();
-		//$(".placeHere img").remove();
+		
 		jon = "<img src =" + response.data[2].images.original.url+"></img>";
 		$(".placeHere").append(jon);
 		
 		
-
+		//$(".placeHere img").remove();
 		
 		console.log(response.data.length);
 
